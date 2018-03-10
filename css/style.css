@@ -1,0 +1,142 @@
+/* Main Styles */
+
+body {
+    background:  url('../images/me.png');
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+.mobile {
+    display: none;
+}
+
+.special-font {
+    font-family: 'Sofia', cursive;
+    font-size: 38px;
+	color:#351451;
+}
+
+.white {
+    color:#fff;
+}
+.light {
+    color: rgb(128, 128, 128);
+}
+.circle {
+    float: left;
+    margin: 0 10px 0 0;
+    width: 45px;
+    height: 45px;
+    background: transparent;
+    border: 1px solid #351451;
+    color:#351451;
+    border-radius: 100px;
+    display: table;
+    transition: all .3s;
+}
+
+.circle:hover {
+    background: #351451;
+    border: 1px solid #351451;
+    color:white;
+
+}
+
+.circle .lnr {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+
+}
+
+.mobile .circle-nav {
+    width: 45px;
+    height: 45px;
+    background: white;
+    border-radius: 100px;
+    display: table;
+    color: rgb(40, 13, 63);
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    box-shadow: 1px 1px 20px rgb(230, 230, 230);
+    
+}
+
+.mobile .circle-nav .lnr  {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.5em;
+    transition: all .2s;
+}
+
+.mobile .circle-nav:hover  .lnr, .mobile .circle-nav:focus  .lnr {
+    transform: rotate(90deg);
+}
+
+.mobile-nav {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgb(40, 13, 63);
+    color:white;
+    animation: zoomzoom .5s;
+
+}
+
+@keyframes zoomzoom {
+    0% {
+        transform: scale(.1);
+    }
+    100% {
+        transform: scale(1); 
+    }
+}
+
+.mobile-nav .circle {
+    width: 45px;
+    height: 45px;
+    background: white;
+    color: rgb(40, 13, 63);
+    border-radius: 100px;
+    display: table;
+    
+}
+
+.mobile-nav .circle .lnr {
+    transition: .3s ease;
+}
+.mobile-nav .circle:hover .lnr {
+    font-size: 1.3em;
+}
+
+ .lnr-cross-circle {
+    color: white;
+    font-size: 3em;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
